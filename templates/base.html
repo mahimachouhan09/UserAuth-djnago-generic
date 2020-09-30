@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <h1>My Site</h1>
+<a href="{% url 'UserLogin:signup' %}"> signup</a>
+<a href="{% url 'UserLogin:login' %}"> login</a><br>
+<a href="{% url 'UserLogin:profile_update' %}"> Update Profile / </a>
+{% if request.user.is_authenticated %}
+<a href="{% url 'UserLogin:logout' %}"> logout / </a>
+<a href="{% url 'UserLogin:change_password' %}"> Change Password</a><br>
+{% endif %}
+
+Welcome , <br>
+    USERNAME   :  {{user.username}}<br>
+    email      :  {{user.email}}<br>
+    First name :  {{user.first_name}}<br>
+    last name  :  {{user.last_name}}<br>
+<hr>
+ {% block content %}
+ {% endblock %}
+</body>
+</html>

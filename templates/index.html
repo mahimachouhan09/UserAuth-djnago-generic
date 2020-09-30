@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Home page ...</h1>
+<table>
+{% if request.user.is_anonymous %}
+<tr><td><a href="{% url 'UserLogin:signup' %}"> signup</a></td></tr>
+    {% endif %}
+
+    admin/<br>
+    change_password/
+    update-profile/
+<hr>
+{% endblock %}
