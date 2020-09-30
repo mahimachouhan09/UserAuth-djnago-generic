@@ -1,0 +1,14 @@
+Django==2.2.16
+django-allauth==0.42.0
+flake8==2.5.4
+isort==4.3.21
+mysqlclient==2.0.1
+pep8==1.7.1
+pip==20.2.3
+pylint-django==2.3.0
+pytz==2020.1
+pycodestyle==2.6.0
+setuptools==20.7.0
+sqlparse==0.3.1
+virtualenv==20.0.31
+wheel==0.29.0
